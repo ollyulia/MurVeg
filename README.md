@@ -5,6 +5,7 @@ Android mobile app - Murmansk vegetation catalog
 Приложение работает оффлайн, данные сохраняются локально.
 Поддержка Android 7.0 (API 24) и выше.
 Интерфейс на русском языке.
+
 Технические характеристики:
 - Язык: Kotlin.
 - UI: Jetpack Compose. 

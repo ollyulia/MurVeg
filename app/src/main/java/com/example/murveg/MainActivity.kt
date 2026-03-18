@@ -93,16 +93,14 @@ fun AppNavigation() {
 
 @Composable
 fun LikesScreen(navController: NavController) {
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .padding(16.dp),
-        verticalArrangement = Arrangement.SpaceBetween,
-        horizontalAlignment = Alignment.CenterHorizontally
+    Box(
+        modifier = Modifier.fillMaxSize()
     ) {
-        // Кнопка внизу по центру
         Button(
-            onClick = { navController.navigate("home") }
+            onClick = { navController.navigate("home") },
+            modifier = Modifier
+                .align(Alignment.TopStart) // Прижать кнопку к верху слева
+                .padding(16.dp, top = 70.dp) // Отступы сверху и слева для красоты
         ) {
             Text("выход")
         }

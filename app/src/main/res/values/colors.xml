@@ -1,10 +1,31 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <!-- Светлая тема -->
+    <color name="md_theme_light_primary">#7BAA3F</color>
+    <color name="md_theme_light_onPrimary">#FFFFFF</color>
+    <color name="md_theme_light_background">#FFF7F7F7</color>
+    <color name="md_theme_light_onBackground">#FF000000</color>
+    <color name="md_theme_light_surface">#FFFFFFFF</color>
+    <color name="md_theme_light_onSurface">#FF000000</color>
+    <color name="md_theme_light_error">#FFB00020</color>
+
+
+    <!-- Тёмная тема -->
+    <color name="md_theme_dark_primary">#7BAA3F</color>
+    <color name="md_theme_dark_onPrimary">#FF000000</color>
+    <color name="md_theme_dark_background">#FF121212</color>
+    <color name="md_theme_dark_onBackground">#FFFFFFFF</color>
+    <color name="md_theme_dark_surface">#FF1E1E1E</color>
+    <color name="md_theme_dark_onSurface">#FFFFFFFF</color>
+    <color name="md_theme_dark_error">#FFCF6679</color>
+
+    <!-- (общие для обеих тем) -->
+    <color name="search_field_bg">#8AA742</color>
+    <color name="search_field_text">#000000</color>
+
+    <color name="filters_button_bg">#BBD6A5</color>
+    <color name="filters_button_text">#000000</color>
+
+    <color name="arrow_button_bg">#8AA742</color>    <!-- фон кнопки -->
+    <color name="arrow_button_icon">#000000</color> <!-- цвет иконки -->
+
 </resources>

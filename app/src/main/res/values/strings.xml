@@ -1,3 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">MurVeg</string>
+
+    <!-- поиск -->
+    <string name="search_hint">Поиск</string>
+    <string name="search_cd">Поле поиска растений</string>
+    <string name="search_action_cd">Выполнить поиск</string>
+
+    <!-- избранное -->
+    <string name="favorites_cd">Открыть избранное</string>
+    <string name="back_from_favorites">Назад</string>
+    <string name="remove_from_favorites">Удалить из избранного</string>
+
+    <!-- фильтры -->
+    <string name="filters">Фильтры</string>
+    <string name="filters_cd">Открыть фильтры</string>
+    <string name="filter_all">Все</string>
+    <string name="filter_trees">Деревья</string>
+    <string name="filter_shrubs">Кустарники</string>
+    <string name="filter_herbs">Травы</string>
+
+    <!-- состояния -->
+    <string name="nothing_found">Ничего не найдено</string>
+    <string name="clear_search">Очистить поиск</string>
+
+    <!-- ошибки ввода -->
+    <string name="search_error_too_long">
+        Слишком длинный запрос (максимум 50 символов)
+    </string>
+    <string name="search_error_invalid_chars">
+        Недопустимые символы в запросе
+    </string>
+
+    <!-- типы растений -->
+    <string name="plant_type_tree">Дерево</string>
+    <string name="plant_type_shrub">Кустарник</string>
+    <string name="plant_type_herb">Трава</string>
+
+    <!-- экран деталей -->
+    <string name="similar">Похожие</string>
 </resources>

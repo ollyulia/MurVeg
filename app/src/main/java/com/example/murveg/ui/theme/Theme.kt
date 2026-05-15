@@ -1,53 +1,50 @@
 package com.example.murveg.ui.theme
 
-import android.app.Activity
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.darkColorScheme
-import androidx.compose.material3.dynamicDarkColorScheme
-import androidx.compose.material3.dynamicLightColorScheme
-import androidx.compose.material3.lightColorScheme
+import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.colorResource
+import com.example.murveg.R
 
-private val DarkColorScheme = darkColorScheme(
-    primary = Purple80,
-    secondary = PurpleGrey80,
-    tertiary = Pink80
+@Composable
+private fun murvegLightColorScheme() = lightColorScheme(
+    primary = colorResource(R.color.md_theme_light_primary),
+    onPrimary = colorResource(R.color.md_theme_light_onPrimary),
+    background = colorResource(R.color.md_theme_light_background),
+    onBackground = colorResource(R.color.md_theme_light_onBackground),
+    surface = colorResource(R.color.md_theme_light_surface),
+    onSurface = colorResource(R.color.md_theme_light_onSurface),
+    error = colorResource(R.color.md_theme_light_error),
 )
 
-private val LightColorScheme = lightColorScheme(
-    primary = Purple40,
-    secondary = PurpleGrey40,
-    tertiary = Pink40
-
-    /* Other default colors to override
-    background = Color(0xFFFFFBFE),
-    surface = Color(0xFFFFFBFE),
-    onPrimary = Color.White,
-    onSecondary = Color.White,
-    onTertiary = Color.White,
-    onBackground = Color(0xFF1C1B1F),
-    onSurface = Color(0xFF1C1B1F),
-    */
+@Composable
+private fun murvegDarkColorScheme() = darkColorScheme(
+    primary = colorResource(R.color.md_theme_dark_primary),
+    onPrimary = colorResource(R.color.md_theme_dark_onPrimary),
+    background = colorResource(R.color.md_theme_dark_background),
+    onBackground = colorResource(R.color.md_theme_dark_onBackground),
+    surface = colorResource(R.color.md_theme_dark_surface),
+    onSurface = colorResource(R.color.md_theme_dark_onSurface),
+    error = colorResource(R.color.md_theme_dark_error),
 )
 
 @Composable
 fun MurVegTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
-    // Dynamic color is available on Android 12+
     dynamicColor: Boolean = true,
     content: @Composable () -> Unit
 ) {
+    val context = LocalContext.current
+
     val colorScheme = when {
+        // динамические цвета Android 12+ (можно выключить, если не нужно)
         dynamicColor && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S -> {
-            val context = LocalContext.current
             if (darkTheme) dynamicDarkColorScheme(context) else dynamicLightColorScheme(context)
         }
-
-        darkTheme -> DarkColorScheme
-        else -> LightColorScheme
+        darkTheme -> murvegDarkColorScheme()
+        else -> murvegLightColorScheme()
     }
 
     MaterialTheme(
